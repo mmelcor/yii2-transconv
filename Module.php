@@ -1,14 +1,13 @@
 <?php
 
-namespace app\modules\yii2transconv;
+namespace mmelcor\yii2transconv;
 
 use Yii;
 use yii\base\BootstrapInterface;
 
-
 class Module extends \yii\base\Module implements BootstrapInterface
 {
-    public $controllerNamespace = 'app\modules\yii2transconv\contollers';
+    public $controllerNamespace = 'mmelcor\yii2transconv\contollers';
 
     public function init()
     {
@@ -24,7 +23,7 @@ class Module extends \yii\base\Module implements BootstrapInterface
 		if ($app instanceof \yii\console\Application) {
 			$app->controllerMap[$this->id] = [
 				'class' =>
-					'app\modules\yii2transconv\commands\ConvertController',
+					'mmelcor\yii2transconv\commands\ConvertController',
 				'module' => $this,
 			];
 		}

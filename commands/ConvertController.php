@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\yii2transconv\commands;
+namespace mmelcor\yii2transconv\commands;
 
 use Yii;
 use yii\console\Controller;
@@ -46,6 +46,7 @@ class ConvertController extends Controller
 
 	protected function actionGetLang($directory) 
 	{
+		$dotFiles = "/(\w+)*\.\w+/";
 		if(is_dir($directory)){
 			if($dh = opendir($directory)) {
 				while(($lang = readdir($dh)) !== false) {
@@ -55,6 +56,14 @@ class ConvertController extends Controller
 		}
 
 		unset($langs[0], $langs[1]);
+		$langs = array_values($langs);
+		$lnum = 0;
+		foreach($langs as $lang) {
+			if(preg_match($dotFiles, $lang)) {
+				unset($langs[$lnum]);
+			}
+			$lnum++;
+		}
 		$langs = array_values($langs);
 
 		return $langs;
