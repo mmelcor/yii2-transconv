@@ -34,4 +34,5 @@ return [
 		'[other modules]' => '[other module paths]',
 		'transconv' => 'mmelcor\yii2transconv\Module',
 	],
-];```
+];
+```
