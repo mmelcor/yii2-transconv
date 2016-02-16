@@ -36,3 +36,9 @@ return [
 	],
 ];
 ```
+Then you can call 
+```
+php yii transconv path/to/messages/
+```
+
+Before or after the conversion make sure that your i18n.php and i18n configuration have been set to use po files according to the Yii2 Internationalization setup. For more info see [Yii2 Documentation](http://www.yiiframework.com/doc-2.0/guide-tutorial-i18n.html).
