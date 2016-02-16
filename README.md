@@ -25,7 +25,13 @@ to the require section of your `composer.json` file.
 Usage
 -----
 
-Once the extension is installed, simply use it in your code by  :
+Once the extension is installed, simply use it in your code by adding the following to your console\config\main-local.php file (advanced) or config\console.php (basic) :
 
 ```php
-<?= \mmelcor\yii2transconv\AutoloadExample::widget(); ?>```
+return [
+	'bootstrap' => [ '[Other boostrap items]', 'transconv'],
+	'modules' => [
+		'[other modules]' => '[other module paths]',
+		'transconv' => 'mmelcor\yii2transconv\Module',
+	],
+];```
