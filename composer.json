@@ -1,0 +1,21 @@
+{
+    "name": "mmelcor/yii2-transconv",
+    "description": "A program to convert php translation files to po translation files.",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","translation","convert","php","po"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jeremiah Payne",
+            "email": "mmelcor@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "mmelcor\\yii2transconv\\": ""
+        }
+    }
+}
