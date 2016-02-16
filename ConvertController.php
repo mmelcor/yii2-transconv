@@ -1,13 +1,15 @@
 <?php
 
-namespace mmelcor\yii2transconv;
+namespace app\modules\yii2transconv\commands;
 
-/**
- * TransConv Class
- */
-class TransConv extends \yii\base\Widget
+use Yii;
+use yii\console\Controller;
+use yii\helpers\Console;
+//use yii\i18n\I18n;
+
+class ConvertController extends Controller
 {
-    public function run()
+	public function actionIndex($directory)
 	{
 		$dir = $directory;
 		$langs = $this->actionGetLang($dir);
@@ -119,3 +121,5 @@ class TransConv extends \yii\base\Widget
 		return true;
 	}
 }
+
+?>
